@@ -7,7 +7,9 @@ displayhelp() {
 echo "Required:"
 echo "sub ses prjname wdr"
 echo "Optional:"
-echo "anatsfx asegsfx voldiscard sbref mask slicetimeinterp despike fwhm scriptdir tmp debug"
+echo "overwrite run_prep run_anat run_sbref anat1sfx anat2sfx TEs tasks \
+	  std mmres normalise voldiscard slicetimeinterp despike sbref mask \
+	  preproc_echoes preproc_optcom greyplot tmp fwhm scriptdir debug fwhm"
 exit ${1:-0}
 }
 
@@ -136,7 +138,9 @@ echo ""
 echo ${printcall}
 echo ""
 checkreqvar sub ses prjname wdr
-checkoptvar anat1sfx anat2sfx voldiscard sbref mask slicetimeinterp despike fwhm scriptdir tmp debug
+checkoptvar TEs tasks anat1sfx anat2sfx std mmres normalise voldiscard sbref \
+			mask fwhm slicetimeinterp despike scriptdir tmp overwrite run_prep \
+			run_anat run_sbref preproc_optcom preproc_echoes greyplot debug
 
 echo "************************************"
 
