@@ -349,4 +349,4 @@ echo "***      Preproc COMPLETE!       ***"
 echo "************************************"
 echo "************************************"
 
-if [[ ${debug} == "yes" ]]; then set +x; else rm -rf ${tmp}; fi
+#if [[ ${debug} == "yes" ]]; then set +x; else rm -rf ${tmp}; fi
